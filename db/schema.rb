@@ -11,20 +11,21 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120914052416) do
+ActiveRecord::Schema.define(:version => 20120914061133) do
 
   create_table "careers", :force => true do |t|
     t.string   "firstname"
     t.string   "lastname"
     t.string   "email"
     t.integer  "mobile"
-    t.string   "dob"
+    t.date     "dob"
     t.string   "gender"
     t.string   "country"
     t.text     "skills"
     t.text     "covernote"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.string   "resume"
   end
 
   create_table "openings", :force => true do |t|
@@ -42,7 +43,7 @@ ActiveRecord::Schema.define(:version => 20120914052416) do
     t.integer  "item"
     t.string   "table"
     t.integer  "month",      :limit => 2
-    t.integer  "year",       :limit => 5
+    t.integer  "year",       :limit => 8
     t.datetime "created_at",              :null => false
     t.datetime "updated_at",              :null => false
   end
