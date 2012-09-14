@@ -1,0 +1,39 @@
+<h1>Listing careers</h1>
+
+<table width="100%" border="2">
+  <tr>
+    <th width="10%">Firstname</th>
+    <th width="10%">Lastname</th>
+    <th width="10%">Email</th>
+    <th width="10%">Mobile</th>
+    <th width="10%">Dob</th>
+    <th width="10%">Gender</th>
+    <th width="10%">Country</th>
+    <th width="10%">Skills</th>
+    <th width="10%">Covernote</th>
+    <th width="10%">Resume</th>
+    
+  </tr>
+
+<% @careers.each do |career| %>
+  <%  save_path= Rails.root.join("#{career.resume}") %>
+  
+  <tr>
+    <td><%= career.firstname %></td>
+    <td><%= career.lastname %></td>
+    <td><%= career.email %></td>
+    <td><%= career.mobile %></td>
+    <td><%= career.dob %></td>
+    <td><%= career.gender %></td>
+    <td><%= career.country %></td>
+    <td><%= career.skills %></td>
+    <td><%= career.covernote %></td>
+    <td><%= link_to 'Resume Download ', "#{save_path}" %></td>
+    
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Career', new_career_path %>

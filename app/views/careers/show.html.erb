@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Firstname:</b>
+  <%= @career.firstname %>
+</p>
+
+<p>
+  <b>Lastname:</b>
+  <%= @career.lastname %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @career.email %>
+</p>
+
+<p>
+  <b>Mobile:</b>
+  <%= @career.mobile %>
+</p>
+
+<p>
+  <b>Dob:</b>
+  <%= @career.dob %>
+</p>
+
+<p>
+  <b>Gender:</b>
+  <%= @career.gender %>
+</p>
+
+<p>
+  <b>Country:</b>
+  <%= @career.country %>
+</p>
+
+<p>
+  <b>Skills:</b>
+  <%= @career.skills %>
+</p>
+
+<p>
+  <b>Covernote:</b>
+  <%= @career.covernote %>
+</p>
+
+<p>
+  <b>Resume:</b>
+  
+  
+  <%= link_to 'Resume Download', "#{@save_path}" %>
+
+
+</p>
+
+
+<%= link_to 'Edit', edit_career_path(@career) %> |
+<%= link_to 'Back', careers_path %>
