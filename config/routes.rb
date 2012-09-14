@@ -1,4 +1,6 @@
 Facebook::Application.routes.draw do
+  resources :openings
+
   resources :careers
 
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'

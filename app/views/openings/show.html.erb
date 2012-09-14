@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Technology:</b>
+  <%= @opening.technology %>
+</p>
+
+<p>
+  <b>Skillset:</b>
+  <%= @opening.skillset %>
+</p>
+
+<p>
+  <b>Jobtitle:</b>
+  <%= @opening.jobtitle %>
+</p>
+
+<p>
+  <b>Experience:</b>
+  <%= @opening.experience %>
+</p>
+
+
+<%= link_to 'Edit', edit_opening_path(@opening) %> |
+<%= link_to 'Back', openings_path %>

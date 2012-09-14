@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  technology: MyString
+  skillset: MyText
+  jobtitle: MyString
+  experience: MyString
+
+two:
+  technology: MyString
+  skillset: MyText
+  jobtitle: MyString
+  experience: MyString
