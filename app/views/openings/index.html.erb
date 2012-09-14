@@ -1,14 +1,12 @@
 <h1>Listing openings</h1>
 
-<table>
+<table border="2" width="100%">
   <tr>
-    <th>Technology</th>
-    <th>Skillset</th>
-    <th>Jobtitle</th>
-    <th>Experience</th>
-    <th></th>
-    <th></th>
-    <th></th>
+    <th width="25%">Technology</th>
+    <th width="25%">Skillset</th>
+    <th width="25%">Jobtitle</th>
+    <th width="25%">Experience</th>
+    
   </tr>
 
 <% @openings.each do |opening| %>
@@ -17,10 +15,7 @@
     <td><%= opening.skillset %></td>
     <td><%= opening.jobtitle %></td>
     <td><%= opening.experience %></td>
-    <td><%= link_to 'Show', opening %></td>
-    <td><%= link_to 'Edit', edit_opening_path(opening) %></td>
-    <td><%= link_to 'Destroy', opening, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
+    </tr>
 <% end %>
 </table>
 

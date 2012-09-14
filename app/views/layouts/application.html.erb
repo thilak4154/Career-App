@@ -47,9 +47,15 @@
           <a class="brand" href="#">Facebook</a>
           <div class="container-fluid nav-collapse">
             <ul class="nav">
-              <li><%= link_to "Link1", "/path1"  %></li>
-              <li><%= link_to "Link2", "/path2"  %></li>
-              <li><%= link_to "Link3", "/path3"  %></li>
+              <li><%= link_to "Openings at Trantor", "/openings"  %></li>
+              <li><%= link_to "Apply for job", "/careers/new"  %></li>
+              <li><%= link_to "Admin", "/admin"  %></li>
+            </ul>
+            <ul class="nav pull-right">
+              <% if user_signed_in? %>
+                <li class="welcome">Welcome <%= current_user.email %>. Not you?</li>
+                <li><%= link_to "Sign Out", destroy_user_session_path, :method => :delete %></li>
+              <% end %>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
@@ -62,9 +68,9 @@
           <div class="well sidebar-nav">
             <ul class="nav nav-list">
               <li class="nav-header">Sidebar</li>
-              <li><%= link_to "Link1", "/path1"  %></li>
-              <li><%= link_to "Link2", "/path2"  %></li>
-              <li><%= link_to "Link3", "/path3"  %></li>
+              <li><%= link_to "Openings at Trantor", "/openings"  %></li>
+              <li><%= link_to "Apply for job", "/careers/new"  %></li>
+              <li><%= link_to "Admin", "/admin"  %></li>
             </ul>
           </div><!--/.well -->
         </div><!--/span-->
