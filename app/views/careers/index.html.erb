@@ -1,7 +1,10 @@
-<h1>Listing careers</h1>
+<h1>Applicants</h1>
 
 <table width="100%" border="2">
   <tr>
+    <%#*<th></th>%>
+    <th></th>
+    <th></th>
     <th width="10%">Firstname</th>
     <th width="10%">Lastname</th>
     <th width="10%">Email</th>
@@ -18,7 +21,10 @@
 <% @careers.each do |career| %>
   <%  save_path= Rails.root.join("#{career.resume}") %>
   
-  <tr>
+  <tr align="center">
+    <%#*<td><%= link_to 'Show',career_path(career.id) %</td>%>
+    <td><%= link_to 'Edit', edit_career_path(career.id)%></td>
+    <td><%= link_to 'Delete'%></td>
     <td><%= career.firstname %></td>
     <td><%= career.lastname %></td>
     <td><%= career.email %></td>
@@ -28,7 +34,7 @@
     <td><%= career.country %></td>
     <td><%= career.skills %></td>
     <td><%= career.covernote %></td>
-    <td><%= link_to 'Resume Download ', "#{save_path}" %></td>
+    <td><%= link_to 'Download ', "#{save_path}" %></td>
     
   </tr>
 <% end %>
@@ -36,4 +42,4 @@
 
 <br />
 
-<%= link_to 'New Career', new_career_path %>
+<%= link_to 'New Applicant', new_career_path %>

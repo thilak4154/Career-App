@@ -7,7 +7,7 @@
     <%= f.input :email, :label => 'Email' %>
     <%= f.input :mobile, :label => 'Mobile Number' %>
     <%= f.input :dob ,:as => :date, :start_year => Date.today.year - 90,:end_year => Date.today.year - 12, :label => 'Date of Birth', :include_blank => true %>
-    <%= f.input :gender, :collection => [:male, :female], :include_blank => false %>
+    <%= f.input :gender, :collection => [:Male, :Female], :include_blank => false %>
     <%= f.input :country ,:priority => [ "India" ], :label => 'Country' %>
     <%= f.input :skills, :label => 'Skills' %>
     <%= f.input :covernote, :label => 'Cover Note'  %>
@@ -15,6 +15,6 @@
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit %>
+    <%= f.button :submit, "Apply" %>
   </div>
 <% end %>

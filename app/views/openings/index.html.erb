@@ -1,22 +1,25 @@
-<h1>Listing openings</h1>
+<h1>Openings</h1>
 
 <table border="2" width="100%">
   <tr>
-    <th width="25%">Technology</th>
-    <th width="25%">Skillset</th>
-    <th width="25%">Jobtitle</th>
-    <th width="25%">Experience</th>
-    
+    <th width="10%"></th>
+    <th width="10%"></th>
+    <th width="20%">Technology</th>
+    <th width="20%">Skillset</th>
+    <th width="20%">Jobtitle</th>
+    <th width="20%">Experience</th>
   </tr>
 
-<% @openings.each do |opening| %>
-  <tr>
-    <td><%= opening.technology %></td>
-    <td><%= opening.skillset %></td>
-    <td><%= opening.jobtitle %></td>
-    <td><%= opening.experience %></td>
+  <% @openings.each do |opening| %>
+    <tr align="center">
+      <td><%= link_to "Edit" %></td>
+      <td><%= link_to "Delete" %></td>
+      <td><%= opening.technology %></td>
+      <td><%= opening.skillset %></td>
+      <td><%= opening.jobtitle %></td>
+      <td><%= opening.experience %></td>
     </tr>
-<% end %>
+  <% end %>
 </table>
 
 <br />
